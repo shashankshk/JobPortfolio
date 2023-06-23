@@ -1,0 +1,13 @@
+@import '../../Assets/styles/themeVariables';
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 99;
+    @include themify($themes) {
+        background: themed('headerFooterBackground');
+    }
+    @include themify($themes) {
+        color: themed('textColor');
+    }
+}
