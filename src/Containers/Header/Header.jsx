@@ -4,6 +4,7 @@ import Image from '../../Components/Image';
 import HeaderMenu from './HeaderMenu';
 import { ThemeContext } from '../../contexts/theme';
 import './Header.scss';
+import ThemeButton from '../../Components/ThemeButton';
 const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const handleThemeChange = () => {
@@ -14,9 +15,7 @@ const Header = () => {
     <div className='header'>
       <Image src={logo} height={48} width={48} />
       <HeaderMenu />
-      <button type='button' className={`toggle-btn__input-label`} onClick={handleThemeChange}>
-        Dark theme
-      </button>
+      <ThemeButton onClick={handleThemeChange} theme={theme} />
     </div>
   );
 };

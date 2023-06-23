@@ -8,7 +8,7 @@ module.exports = (env) => {
     entry: "./index.js",
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js",
+      filename: "[name].js",
       publicPath: "/",
     },
     resolve: {
@@ -60,5 +60,10 @@ module.exports = (env) => {
       port: 3000,
       historyApiFallback: true,
     },
+    optimization: {
+      minimize: false,
+      runtimeChunk: "single",
+    },
+
   };
 };

@@ -1,9 +1,11 @@
 @import '../../Assets/styles/themeVariables';
 .header {
+    padding: 30px 30px;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    z-index: 99;
+    box-sizing: border-box;
     @include themify($themes) {
         background: themed('headerFooterBackground');
     }
