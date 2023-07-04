@@ -1,0 +1,12 @@
+.shadow-wrapper {
+    border-radius: 20px;
+    display: inline-block;
+
+    @include themify($themes) {
+        background: themed('bodyBackgroundColor');
+    }
+
+    box-shadow: 5px 5px 8px #d6d5d5,
+    -5px -5px 8px #ffffff;
+    overflow: hidden;
+}

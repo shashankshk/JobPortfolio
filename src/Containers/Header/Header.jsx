@@ -3,7 +3,7 @@ import logo from '../../Assets/images/NewLogo.png';
 import Image from '../../Components/Image';
 import HeaderMenu from './HeaderMenu';
 import { ThemeContext } from '../../contexts/theme';
-import './Header.scss';
+// import './Header.scss';
 import ThemeButton from '../../Components/ThemeButton';
 const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);

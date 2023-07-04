@@ -1,0 +1,14 @@
+@import '../../../Assets/styles/themeVariables';
+
+.shadow-wrapper-span {
+    border-radius: 20px;
+    display: inline-block;
+
+    @include themify($themes) {
+        background: themed('bodyBackgroundColor');
+    }
+
+    box-shadow: 20px 20px 60px #d6d5d5,
+    -20px -20px 60px #ffffff;
+    overflow: hidden;
+}

@@ -1,0 +1,18 @@
+// @import '../../Assets/styles/themeVariables';
+
+.home-container {
+    height: 100%;
+
+    // @include themify($themes) {
+    //     background: themed('bodyBackgroundColor');
+    // }
+
+    // @include themify($themes) {
+    //     color: themed('textColor');
+    // }
+
+    display: flex;
+    flex-direction: column;
+
+
+}

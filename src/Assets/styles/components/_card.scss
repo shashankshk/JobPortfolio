@@ -1,0 +1,25 @@
+$tags: info, highlight, plain;
+
+@mixin card-border($tag) {
+    @if $tag =='info' {
+        border: 1px solid #bfbfbf;
+    }
+
+    @else if $tag =='highlight' {
+        border: 1px dotted #bfbfbf;
+    }
+
+    @else if $tag =='plain' {
+        border: none;
+    }
+}
+
+@each $tag in $tags {
+    .card-wrapper-#{$tag} {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid #bfbfbf;
+        display: inline-block;
+        @include card-border($tag);
+    }
+}

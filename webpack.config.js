@@ -1,55 +1,60 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 // const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 module.exports = (env) => {
-  const isProduction = env === "production";
+  const isProduction = env === 'production';
   return {
-    mode: "development",
-    entry: "./index.js",
+    mode: 'development',
+    entry: './index.js',
     output: {
-      path: path.resolve(__dirname, "dist"),
-      filename: "[name].js",
-      publicPath: "/",
+      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].js',
+      publicPath: '/',
     },
     resolve: {
       alias: {
-        components: path.resolve(__dirname, "src"),
+        components: path.resolve(__dirname, 'src'),
       },
-      extensions: [".js", ".jsx"],
+      extensions: ['.js', '.jsx'],
     },
     module: {
       rules: [
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          use: ["babel-loader", {
-            loader: "eslint-loader",
-            options: {
-              emitWarning: true
-            }
-          }],
+          use: [
+            'babel-loader',
+            {
+              loader: 'eslint-loader',
+              options: {
+                emitWarning: true,
+              },
+            },
+          ],
         },
         {
           test: /\.(css|scss)$/,
-          use: ["style-loader", "css-loader", "sass-loader"],
+          use: ['style-loader', 'css-loader', 'sass-loader'],
         },
         {
           test: /\.(png|jpe?g|gif|svg)$/i,
-          type: "asset/resource",
+          type: 'asset/resource',
         },
       ],
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./public/index.html",
-      })
+        template: './public/index.html',
+      }),
+      new Dotenv(),
     ],
-    devtool: isProduction ? "source-map" : "cheap-module-source-map",
+    devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
     devServer: {
       static: {
-        directory: path.join(__dirname, "dist"),
+        directory: path.join(__dirname, 'dist'),
       },
-      client:{
+      client: {
         overlay: {
           errors: true,
           warnings: false,
@@ -62,8 +67,7 @@ module.exports = (env) => {
     },
     optimization: {
       minimize: false,
-      runtimeChunk: "single",
+      runtimeChunk: 'single',
     },
-
   };
 };

@@ -1,0 +1,33 @@
+$tags: primary, secondary, warning;
+
+@mixin button-style($tag) {
+    @if $tag =='primary' {
+        background-color: white;
+        border: 2px solid #d6ddff;
+
+    }
+
+    @else if $tag =='secondary' {
+        border: 2px solid #bfbfbf;
+    }
+
+    @else if $tag =='warning' {
+        border: none;
+    }
+}
+
+@each $tag in $tags {
+    .shadow-button-#{$tag} {
+        border-radius: inherit;
+        display: inline-block;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        @include button-style($tag);
+    }
+}
+
+.shadow-button-wrapper {
+    margin-top: 10px;
+
+}

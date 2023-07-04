@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../Icons/Icon';
 import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons';
-import './ThemeButton.scss';
+// import './ThemeButton.scss';
 const ThemeButton = ({ onClick, theme }) => {
   return (
     // <button type='button' className={`toggle-btn__input-label`} onClick={onClick}>

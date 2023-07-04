@@ -1,15 +1,12 @@
-@import './themeVariables';
-body {
-    margin:0;
-}
-* {
-    font-family: Roboto, sans-serif;  
-  }
+@import "abstracts/functions", "abstracts/mixins", "abstracts/variables";
 
-.app-container {
-    margin: 0 auto;
-    width: 100%;
-    // display: flex;
-    flex-direction: column;
-    align-content: center;
-}
+@import "components/buttons", "components/card", "components/icons", "components/labels", "components/menuItem",
+"components/shadowWrapper", "components/themeButton", "components/headerMenu", "components/projectCard";
+
+@import "layout/blogsPreview", "layout/projectsOverview", "layout/intro", "layout/app", "layout/header";
+
+@import "base/reset", "base/typography";
+
+@import "pages/home";
+
+@import "themes/theme";

@@ -1,0 +1,86 @@
+// @import '../../../Assets/styles/themeVariables';
+
+.intro-section {
+    padding: 30px 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+    max-width: 100%;
+    justify-content: space-between;
+
+    @include themify($themes) {
+        background: themed('bodyBackgroundColor');
+    }
+
+    @include themify($themes) {
+        color: themed('textColor');
+    }
+
+    .left-section {
+        display: flex;
+        flex-basis: 48%;
+        align-items: center;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        flex-basis: 48%;
+
+        .intro-description {
+
+
+            h2 {
+                margin: 0;
+            }
+
+            .description-block {
+                padding: 20px;
+            }
+        }
+
+        .right-section-box {
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .intro-buttons {
+                .intro-primary {
+                    margin-right: 20px;
+                }
+
+            }
+        }
+    }
+}
+
+/* Extra Small (xs) */
+@media (max-width: 576px) {
+    /* CSS rules for extra small screens */
+}
+
+/* Small (sm) */
+@media (min-width: 577px) and (max-width: 768px) {
+    /* CSS rules for small screens */
+}
+
+/* Medium (md) */
+@media (min-width: 769px) and (max-width: 992px) {
+    /* CSS rules for medium screens */
+}
+
+/* Large (lg) */
+@media (min-width: 993px) and (max-width: 1200px) {
+    /* CSS rules for large screens */
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1201px) {
+    .intro-section {
+        padding: 30px 360px;
+    }
+
+    /* CSS rules for extra large screens */
+}

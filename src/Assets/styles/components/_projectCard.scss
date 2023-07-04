@@ -1,0 +1,18 @@
+.project-overview-card {
+    position: absolute;
+    height: 220px;
+    width: 220px;
+    flex-basis: 25%;
+    padding: 10px;
+    border: 2px solid rgba(94, 39, 94, 0.3);
+    opacity: 1;
+    background-color: white;
+
+    img {
+        margin: auto;
+    }
+
+    label {
+        margin: auto;
+    }
+}
