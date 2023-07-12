@@ -18,10 +18,19 @@ export const projects = [
       'At EXZEO India, one of my major projects was maintaining and enhancing Inbox, a web-based claim processing application. Deployed across eight insurance organizations, the project required following SCRUM agile methodology and collaborating with cross-functional teams. I led the UI development efforts, designing and implementing modular high-level and low-level UI components utilizing Vue.js and GraphQL. I also assembled a reusable package using JavaScript and Scalable Vector Graphics. This tool visualized the flow of claims across different workflows, enabling organizations to identify bottlenecks in their claim processing cycle.',
     ],
     image: ClaimColony,
-    link: '',
+    link: 'https://www.justez.app/',
   },
   {
     name: 'JustEZ',
+    summary: 'A one stop solution for claim inspectors.',
+    description: [
+      'Another key project at EXZEO India was engineering a desktop application called JustEZ, which substantially lowered the claim inspection process time. The application was built with Electron, React, and JavaScript, and featured an in-house spreadsheet and a cloud-based file management system to store onsite information. Additionally, a multi-threaded service using resizing algorithms was architected to reduce image processing time by 99%.',
+    ],
+    image: JustEZ,
+    link: 'https://www.justez.app/',
+  },
+  {
+    name: 'Studio Project-CMU',
     summary: 'A one stop solution for claim inspectors.',
     description: [
       'Another key project at EXZEO India was engineering a desktop application called JustEZ, which substantially lowered the claim inspection process time. The application was built with Electron, React, and JavaScript, and featured an in-house spreadsheet and a cloud-based file management system to store onsite information. Additionally, a multi-threaded service using resizing algorithms was architected to reduce image processing time by 99%.',
