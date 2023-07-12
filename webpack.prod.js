@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const webpack = require('webpack');
 module.exports = (env) => {
   const isProduction = env === 'production';
   return {
@@ -53,6 +53,10 @@ module.exports = (env) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './public/index.html',
+      }),
+      new webpack.DefinePlugin({
+        'process.env.SPACE_ID': JSON.stringify(process.env.SPACE_ID),
+        'process.env.CONTENT_DELIVERY_API': JSON.stringify(process.env.CONTENT_DELIVERY_API),
       }),
     ],
     devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
