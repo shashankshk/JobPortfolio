@@ -7,8 +7,11 @@ import personal from '../../../Assets/images/Self.jpg';
 // import Image from '../../../Components/Image';
 import NormalButton from '../../../Components/Buttons/NormalButton';
 import Image from 'react-graceful-image';
+import { useNavigate } from 'react-router-dom';
+import Socials from '../../../Components/Socials';
 
 const Intro = () => {
+  const navigate = useNavigate();
   return (
     <div className='intro-section'>
       <div className='left-section'>
@@ -21,19 +24,32 @@ const Intro = () => {
             <div className='description-block'>
               <h1 className='heading-1'>Hi! I am Shashank</h1>
               <p className='description'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nostrum porro eaque
-                maxime pariatur ducimus eius magnam exercitationem ullam fuga enim, eos quo ipsam
-                distinctio perferendis. Quaerat sequi sunt officiis. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Recusandae sint quod laudantium, excepturi eligendi
-                repellendus perspiciatis enim. Sint quis in doloremque blanditiis quaerat,
-                perferendis molestias, consequuntur labore dolorum asperiores reprehenderit.
+                I&apos;m a software engineer with a knack for transforming tricky challenges into
+                elegant software solutions. I&apos;ve spent my career developing cool applications
+                with some of the biggest names in the biz, using a whole alphabet soup of
+                technologies like JavaScript, TypeScript, React, and more. I got my Master&apos;s
+                from Carnegie Mellon, but I&apos;m always learning, always growing. This website is
+                a showcase of my journey so far: the projects I&apos;ve loved, the teams I&apos;ve
+                collaborated with, and the impact I&apos;ve made along the way. Dive in and see what
+                I&apos;ve been up to!
               </p>
             </div>
           </div>
           {/* </Card> */}
           <div className='intro-buttons'>
-            <NormalButton value={'View Projects'} type={'primary'} className={'primary'} />
-            <NormalButton value={'Contact'} type={'secondary'} className={'secondary'} />
+            <NormalButton
+              value={'View Projects'}
+              type={'primary'}
+              className={'primary'}
+              onClick={() => navigate('/projects')}
+            />
+            <NormalButton
+              value={'Resume'}
+              type={'secondary'}
+              className={'secondary'}
+              onClick={() => navigate('/resume')}
+            />
+            <Socials />
           </div>
         </div>
       </div>

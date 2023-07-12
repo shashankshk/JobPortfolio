@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import NormalButton from '../Buttons/NormalButton';
 
 const ProjectCard = ({ project, index }) => {
-  const { name, image } = project;
+  const { name, summary, image } = project;
   return (
     <div className='project-card' key={index}>
       <img src={image} alt='Project 1' className='project-image' />
-      <h3 className='project-title'>{name}</h3>
-      <p className='project-description'>Brief description of the project.</p>
+      <h3 className='project-title heading-3'>{name}</h3>
+      <p className='project-description'>{summary}</p>
       <NormalButton value={'Details'} type={'primary'} className='project-link' />
     </div>
   );

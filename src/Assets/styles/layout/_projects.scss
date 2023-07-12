@@ -4,12 +4,63 @@
     flex-direction: row;
     padding-top: 90px;
     padding-bottom: 120px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    @include for-desktop-up {
+        padding: 30px 15%;
+    }
+
+    @include for-tablet-landscape-up {
+        padding: 0 10%;
+        padding-bottom: 90px;
+        padding-top: 30px;
+    }
+
+
+    @include for-tablet-portrait-up {
+        padding: 30px 10%;
+        flex-direction: column-reverse;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+
+    @include for-phone-only {
+        padding: 15px 10px;
+        flex-direction: column-reverse;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
 
     .project-image-section {
         margin-left: 60px;
+
+        @include for-tablet-portrait-up {
+            flex-direction: column-reverse;
+            margin: auto;
+        }
+
+        @include for-phone-only {
+            width: 100%;
+            margin: auto;
+        }
+
+        .project-image {
+            width: 480px;
+            height: auto;
+
+            @include for-tablet-portrait-up {
+                width: 360px;
+            }
+
+            @include for-tablet-landscape-up {
+                width: 360px;
+            }
+
+            @include for-phone-only {
+                width: 100%;
+            }
+        }
     }
 
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
 
     &-s1 {
         position: relative;
@@ -19,6 +70,7 @@
         }
 
         z-index: 2;
+
     }
 
     &-s2 {
@@ -28,9 +80,15 @@
             background: themed('section2BackgroundColor');
         }
 
+        flex-direction: row-reverse;
         padding-top: 120px;
         margin-top: -90px;
         z-index: 1;
+
+        .project-image-section {
+            margin-left: 0;
+            margin-right: 60px;
+        }
     }
 
 
@@ -38,6 +96,10 @@
         @include themify($themes) {
             background: themed('section3BackgroundColor');
         }
+
+        padding-top: 120px;
+        margin-top: -90px;
+        z-index: 1;
     }
 
     &-s4 {

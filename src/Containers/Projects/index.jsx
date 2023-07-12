@@ -1,12 +1,11 @@
 import React from 'react';
 import { projects } from '../Home/homeData';
-import ProjectCard from '../../Components/ProjectCard/ProjectCard';
-import Image from 'react-graceful-image';
+import ProjectItem from './ProjectItem';
 
 const Projects = () => {
   return (
     <div className='projects-page'>
-      <div className='project-section project-section-s1'>
+      {/* <div className='project-section project-section-s1'>
         <div className='project-detail-section'>
           <h2 className='heading-2'>Project Title</h2>
           <p className='description'>
@@ -26,10 +25,10 @@ const Projects = () => {
           </p>
         </div>
         <div className='project-image-section'>
-          <Image src={projects[0].image} />
+          <Image src={projects[0].image} className='project-image' />
         </div>
-      </div>
-      <div className='project-section project-section-s2'>
+      </div> */}
+      {/* <div className='project-section project-section-s2'>
         <div className='project-detail-section'>
           <h2 className='heading-2'>Project Title</h2>
           <p>
@@ -51,10 +50,10 @@ const Projects = () => {
         <div className='project-image-section'>
           <Image src={projects[0].image} />
         </div>
-      </div>
-      {/* {projects.map((project, index) => (
-          <ProjectCard project={project} key={index} />
-        ))} */}
+      </div> */}
+      {projects.map((project, index) => (
+        <ProjectItem project={project} key={index} index={index} />
+      ))}
     </div>
   );
 };

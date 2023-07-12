@@ -8,21 +8,11 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url,
 ).toString();
 const Resume = () => {
-  const [numPages, setNumPages] = useState(null);
   const [pageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
 
   return (
     <div className='resume-page'>
-      <Document
-        file={pdfFile}
-        onLoadSuccess={onDocumentLoadSuccess}
-        renderMode='canvas'
-        className='resume-preview'
-      >
+      <Document file={pdfFile} renderMode='canvas' className='resume-preview'>
         <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
       </Document>
       <NormalButton value={'Download Resume'} type={'primary'} className={'resume-botton'} />

@@ -10,6 +10,10 @@ $code-background-color: #f8f8f8;
     margin: 1.58em 0;
     font-size: 21px;
 
+    @include themify($themes) {
+        color: themed('secondaryTextColor')
+    }
+
     h1,
     h2,
     h3,

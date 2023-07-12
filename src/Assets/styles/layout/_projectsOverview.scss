@@ -11,6 +11,13 @@
         background: themed('section2BackgroundColor');
     }
 
+
+    @include for-phone-only {
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+        flex-direction: column;
+    }
+
+
     h2 {
         padding: 20px;
     }
@@ -19,11 +26,18 @@
         padding: 90px 15%;
     }
 
+    @include for-tablet-portrait-up {
+        // font-size: 48px;
+    }
 
     .projects-showcase {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include for-phone-only {
+            flex-direction: column;
+        }
 
         .more-projects {
             width: 100%;

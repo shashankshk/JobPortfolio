@@ -1,4 +1,6 @@
 .projects-page {
+    height: 100%;
+
     @include themify($themes) {
         background: themed('bodyBackgroundColor');
     }

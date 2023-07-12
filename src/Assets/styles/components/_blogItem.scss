@@ -6,6 +6,10 @@
     margin: 20px 0;
     padding: 20px 0;
 
+    @include for-phone-only {
+        flex-direction: column-reverse;
+    }
+
     :hover {
         cursor: pointer;
     }
@@ -14,13 +18,26 @@
         flex: 1 1 auto;
     }
 
-    .blog-item-image {
-        width: 112px;
-        height: 112px;
-        aspect-ratio: auto 112 / 112;
-        overflow: clip;
-        overflow-clip-margin: content-box;
-        object-fit: cover;
-        margin-left: 60px;
+    .blog-cover-image {
+        @include for-phone-only {
+            margin: auto;
+        }
+
+        .blog-item-image {
+            width: 112px;
+            height: 112px;
+            aspect-ratio: auto 112 / 112;
+            overflow: clip;
+            overflow-clip-margin: content-box;
+            object-fit: cover;
+            margin-left: 60px;
+
+            @include for-phone-only {
+                margin: auto;
+                height: auto;
+                width: 200px;
+            }
+        }
     }
+
 }

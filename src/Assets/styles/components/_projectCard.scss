@@ -1,6 +1,9 @@
 .project-card {
     flex-basis: 25%;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     @include themify($themes) {
         background-color: themed('cardBackground');
@@ -27,5 +30,7 @@
         margin-top: 10px;
     }
 
-    .project-link {}
+    .project-link {
+        margin: auto;
+    }
 }

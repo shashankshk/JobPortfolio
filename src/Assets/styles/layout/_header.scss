@@ -18,4 +18,8 @@
     @include for-desktop-up {
         padding: 30px 15%;
     }
+
+    @include for-phone-only {
+        padding: 15px 10px;
+    }
 }
