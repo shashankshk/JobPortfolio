@@ -1,0 +1,25 @@
+.resume-page {
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15%;
+
+    @include themify($themes) {
+        background: themed('bodyBackgroundColor');
+    }
+
+    .resume-preview {
+        display: inline-block;
+        margin: auto auto;
+
+    }
+
+    .react-pdf__Page__canvas {
+        margin: auto;
+    }
+
+    .resume-botton {
+        margin: 10px auto;
+    }
+}

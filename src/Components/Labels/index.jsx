@@ -1,15 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './Label.scss';
 
-const Label = ({ value, type, className }) => {
-  return <label className={`label-${type} ${className}`}>{value}</label>;
+const Label = ({ value, type, className, italic }) => {
+  const classes = [
+    'label',
+    type && `label-${type}`,
+    className && className,
+    italic && 'label-italic',
+  ]
+    .filter(Boolean)
+    .join(' ');
+  return <span className={classes}>{value}</span>;
 };
 
 Label.propTypes = {
   type: PropTypes.oneOf(['primary', 'secondary']),
   value: PropTypes.string,
   className: PropTypes.string,
+  italic: PropTypes.Boolean,
 };
 
 export default Label;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import Label from '../../../Components/Labels';
 // import Image from '../../../Components/Image';
-import PinnedBlog from '../../../Components/PinnedBlog';
+import BlogCard from '../../../Components/BlogCard';
 // import './BlogsPreview.scss';
 
 const BlogsPreview = ({ blogs }) => {
@@ -10,9 +10,14 @@ const BlogsPreview = ({ blogs }) => {
   return (
     <div className='blogs-overview'>
       <div className='pinned-blog'>
-        <PinnedBlog blog={firstOrderBlog} />
+        <BlogCard blog={firstOrderBlog} type='pinned' />
       </div>
-      <div className='other-blogs'></div>
+
+      <div className='other-blogs'>
+        <BlogCard blog={firstOrderBlog} type='generic' />
+        <BlogCard blog={firstOrderBlog} type='generic' />
+        <BlogCard blog={firstOrderBlog} type='generic' />
+      </div>
     </div>
   );
 };

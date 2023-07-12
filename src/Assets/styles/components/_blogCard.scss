@@ -1,0 +1,17 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+
+    @include themify($themes) {
+        background-color: themed('cardBackground');
+    }
+
+    &-pinned {
+        padding: 1rem;
+    }
+
+    &-generic {
+        padding: 0.5rem;
+        margin: 10px;
+    }
+}

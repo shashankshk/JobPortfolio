@@ -11,13 +11,13 @@ const ThemeButton = ({ onClick, theme }) => {
         <Icon
           type={faSun}
           style={{ color: '#ffd43c', display: 'flex', alignItems: 'center' }}
-          size='lg'
+          size='xl'
         />
       ) : (
         <Icon
           type={faMoon}
           style={{ color: 'black', display: 'flex', alignItems: 'center' }}
-          size='lg'
+          size='xl'
         />
       )}
     </div>

@@ -1,18 +1,31 @@
-.project-overview-card {
-    position: absolute;
-    height: 220px;
-    width: 220px;
+.project-card {
     flex-basis: 25%;
-    padding: 10px;
-    border: 2px solid rgba(94, 39, 94, 0.3);
-    opacity: 1;
-    background-color: white;
+    margin-bottom: 30px;
 
-    img {
-        margin: auto;
+    @include themify($themes) {
+        background-color: themed('cardBackground');
+        color: themed('textColor')
     }
 
-    label {
-        margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+
+    .project-image {
+        width: 100%;
+        height: auto;
     }
+
+    .project-title {
+        font-size: 1.5em;
+        margin-top: 15px;
+    }
+
+    .project-description {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+
+    .project-link {}
 }

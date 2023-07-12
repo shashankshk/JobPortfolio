@@ -31,3 +31,39 @@ $tags: primary, secondary, warning;
     margin-top: 10px;
 
 }
+
+
+.normal-button {
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    width: max-content;
+    margin-top: 20px;
+    padding: 10px 20px;
+    // background-color: #3498db;
+    // color: white;
+    text-decoration: none;
+
+
+    &-primary {
+        @include themify($themes) {
+            background: themed('buttonBackground');
+            color: themed('buttonText')
+        }
+    }
+
+    &-secondary {
+        @include themify($themes) {
+            background: themed('secondaryButtonBackground');
+            color: themed('secondaryButtonText')
+        }
+    }
+
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken(#3498db, 10%);
+    }
+
+}

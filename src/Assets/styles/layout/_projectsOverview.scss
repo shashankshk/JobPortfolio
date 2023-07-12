@@ -1,36 +1,46 @@
 .projects-overview {
-    padding: 30px 10%;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -15%;
+    padding: 90px 10%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
-    .projects-overview-left {
-        flex-basis: 50%;
-        padding: 10px;
+    @include themify($themes) {
+        background: themed('section2BackgroundColor');
     }
 
-    .projects-overview-right {
-        flex-basis: 50%;
-        padding: 10px;
-        position: relative;
-        height: 470px;
-        overflow: visible;
+    h2 {
+        padding: 20px;
+    }
 
-        .project-overview-card-0 {
-            left: 15%;
-        }
+    @include for-desktop-up {
+        padding: 90px 15%;
+    }
 
-        .project-overview-card-1 {
-            top: 100px;
-            left: 55%;
-            z-index: 20;
-        }
 
-        .project-overview-card-2 {
-            top: 250px;
-            left: 25%;
-            z-index: 10;
+    .projects-showcase {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .more-projects {
+            width: 100%;
+            text-align: right;
+            text-decoration: none;
+
+            a {
+                font-size: 1.2em;
+                text-decoration: none;
+                color: #3498db;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
+
+
 }

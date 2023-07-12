@@ -1,0 +1,5 @@
+.projects-page {
+    @include themify($themes) {
+        background: themed('bodyBackgroundColor');
+    }
+}

@@ -1,0 +1,25 @@
+.heading-2 {
+    @include themify($themes) {
+        color: themed('textColor')
+    }
+}
+
+.heading-1 {
+    font-size: 54px;
+    font-weight: bold;
+    margin: 0;
+
+    @include themify($themes) {
+        color: themed('textColor')
+    }
+
+    &-centred {
+        text-align: center;
+        margin: 10px;
+    }
+
+    &-title {
+        margin: 10px 0;
+        font-size: 42px;
+    }
+}

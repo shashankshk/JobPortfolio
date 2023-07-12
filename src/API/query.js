@@ -10,7 +10,27 @@ export const GET_ARTICLES = gql`
         order
         author
         tags
+        sys {
+          id
+        }
+        summary
       }
+    }
+  }
+`;
+
+export const GET_ARTICLE = gql`
+  query GetArticle($id: String!) {
+    articles(id: $id) {
+      title
+      content {
+        json
+      }
+      coverImage {
+        url
+      }
+      publishedDate
+      tags
     }
   }
 `;

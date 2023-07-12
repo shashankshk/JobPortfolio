@@ -41,6 +41,14 @@ module.exports = (env) => {
           test: /\.(png|jpe?g|gif|svg)$/i,
           type: 'asset/resource',
         },
+        {
+          test: /\.(pdf|txt)$/,
+          include: path.resolve(__dirname, 'src'),
+          type: 'asset/resource',
+          generator: {
+            filename: 'assets/[name][ext]',
+          },
+        },
       ],
     },
     plugins: [

@@ -1,10 +1,15 @@
 import React from 'react';
-// import PropTypes from 'prop-types'
+import { useQuery } from '@apollo/client';
+import { GET_ARTICLES } from '../../API/query';
+import BlogsList from './BlogsList';
 
 function Blogs() {
-  return <div>Blogs</div>;
+  const { loading, data } = useQuery(GET_ARTICLES);
+  return (
+    <div className='blogs-page'>
+      {!loading && <BlogsList blogs={data.articlesCollection.items} />}
+    </div>
+  );
 }
-
-// Blogs.propTypes = {}
 
 export default Blogs;

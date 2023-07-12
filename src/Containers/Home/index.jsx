@@ -1,9 +1,4 @@
 import React from 'react';
-// import ShadowWrapper from '../../Components/ShadowWrapper';
-// import PropTypes from 'prop-types';
-// import personal from '../../Assets/images/Self.jpg';
-// import './Home.scss';
-// import Image from '../../Components/Image';
 import Intro from './Intro/Intro';
 import ProjectsOverview from './ProjectsOverview';
 import { projects } from './homeData';

@@ -9,8 +9,9 @@ export const client = new ApolloClient({
   },
 });
 
-export const get = (query) => {
+export const get = (query, variables) => {
   client.query({
     query: query,
+    variables: variables,
   });
 };

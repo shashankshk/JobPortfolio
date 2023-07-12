@@ -6,4 +6,33 @@
         text-decoration: none;
         color: inherit;
     }
+
+    .nav-link {
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .menu-active {
+        @include themify($themes) {
+            color: themed('accent')
+        }
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: currentColor;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+    }
+
+    .nav-link:hover::before,
+    .nav-link.menu-active::before {
+        width: 100%;
+    }
 }

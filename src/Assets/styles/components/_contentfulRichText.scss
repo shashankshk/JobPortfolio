@@ -1,0 +1,42 @@
+$content-text-color: #333;
+$blockquote-border-color: #dfe2e5;
+$blockquote-text-color: #555;
+$code-background-color: #f8f8f8;
+
+.contentful-rich-text {
+    font-family: 'Georgia', 'serif';
+    color: $content-text-color;
+    line-height: 1.58;
+    margin: 1.58em 0;
+    font-size: 21px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+        margin-top: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        margin: 1em 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    blockquote {
+        padding: 0 1em;
+        color: $blockquote-text-color;
+        border-left: 0.25em solid $blockquote-border-color;
+    }
+
+    .blog-code-block {
+        border-radius: 10px;
+    }
+}

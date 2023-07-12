@@ -1,12 +1,13 @@
 @import "abstracts/functions", "abstracts/mixins", "abstracts/variables";
 
 @import "components/buttons", "components/card", "components/icons", "components/labels", "components/menuItem",
-"components/shadowWrapper", "components/themeButton", "components/headerMenu", "components/projectCard";
+"components/shadowWrapper", "components/themeButton", "components/headerMenu", "components/projectCard", "components/description", "components/headings",
+"components/blogCard", "components/blogItem", "components/contentfulRichText";
 
-@import "layout/blogsPreview", "layout/projectsOverview", "layout/intro", "layout/app", "layout/header";
+@import "layout/blogsPreview", "layout/projectsOverview", "layout/intro", "layout/app", "layout/header", "layout/blogReader", "layout/projects";
 
 @import "base/reset", "base/typography";
 
-@import "pages/home";
+@import "pages/home", "pages/blogs", "pages/resume", "pages/projects";
 
 @import "themes/theme";

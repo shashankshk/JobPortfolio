@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from '../Image';
+import Image from 'react-graceful-image';
 import Label from '../Labels';
 
-const PinnedBlog = ({ blog }) => {
+const BlogCard = ({ blog, type }) => {
   const { coverImage, title, author } = blog;
+  const classes = ['blog', type && `blog-${type}`].filter(Boolean).join(' ');
+
   return (
-    <div className='pinned-blog'>
-      <Image src={coverImage.url} height={300} />
-      <Label value={title} type={'primary'} />
+    <div className={classes}>
+      <Image src={coverImage.url} width={'100%'} height={'auto'} />
+      <Label value={title} type='primary' />
       <Label value={author} type='secondary' />
     </div>
   );
 };
 
-PinnedBlog.propTypes = {
+BlogCard.propTypes = {
   blog: {
     coverImage: {
       url: PropTypes.string,
@@ -23,6 +25,7 @@ PinnedBlog.propTypes = {
     author: PropTypes.string,
     tags: PropTypes.array,
   },
+  type: PropTypes.string,
 };
 
-export default PinnedBlog;
+export default BlogCard;

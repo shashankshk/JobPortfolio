@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '../Card';
-import Image from '../Image';
-import Label from '../Labels';
-// import './ProjectCard.scss';
+import NormalButton from '../Buttons/NormalButton';
 
 const ProjectCard = ({ project, index }) => {
   const { name, image } = project;
   return (
-    <Card type={'info'} className={`project-overview-card project-overview-card-${index}`}>
-      <Image src={image} height={150} />
-      <Label value={name} type={'primary'} />
-      {/* <p>{description}</p> */}
-    </Card>
+    <div className='project-card' key={index}>
+      <img src={image} alt='Project 1' className='project-image' />
+      <h3 className='project-title'>{name}</h3>
+      <p className='project-description'>Brief description of the project.</p>
+      <NormalButton value={'Details'} type={'primary'} className='project-link' />
+    </div>
   );
 };
 

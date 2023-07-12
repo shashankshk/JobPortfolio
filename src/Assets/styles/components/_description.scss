@@ -1,0 +1,6 @@
+.description {
+
+    @include themify($themes) {
+        color: themed('secondaryTextColor')
+    }
+}

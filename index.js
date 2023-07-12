@@ -6,6 +6,10 @@ import { ApolloProvider } from '@apollo/client';
 import Blogs from './src/Containers/Blogs';
 import Home from './src/Containers/Home';
 import { client } from './src/API/api';
+import Resume from './src/Containers/Resume';
+import BlogReader from './src/Containers/BlogReader';
+import Projects from './src/Containers/Projects';
+
 client;
 const router = createBrowserRouter([
   {
@@ -19,6 +23,18 @@ const router = createBrowserRouter([
       {
         path: 'blog',
         element: <Blogs />,
+      },
+      {
+        path: 'blog/:blogId',
+        element: <BlogReader />,
+      },
+      {
+        path: 'resume',
+        element: <Resume />,
+      },
+      {
+        path: 'projects',
+        element: <Projects />,
       },
     ],
   },

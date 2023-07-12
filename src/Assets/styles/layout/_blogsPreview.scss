@@ -1,3 +1,33 @@
 .blogs-overview {
     padding: 30px 10%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+    @include themify($themes) {
+        background-color: themed('section3BackgroundColor');
+    }
+
+    @include for-desktop-up {
+        padding: 30px 15%;
+    }
+
+    .pinned-blog {
+        flex-basis: 50%;
+    }
+
+    .other-blogs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        justify-content: flex-end;
+
+        div {
+            flex-basis: 33%;
+        }
+    }
 }

@@ -1,20 +1,25 @@
-$tags: primary, secondary;
+.label {
+    margin: 5px 0;
 
-@mixin label($tag) {
-    @if $tag =='primary' {
+    &-primary {
         font-size: 20px;
         font-weight: 600;
 
+        @include themify($themes) {
+            color: themed('textColor')
+        }
     }
 
-    @else if $tag =='secondary' {
+    &-secondary {
         font-size: medium;
         font-weight: 400;
-    }
-}
 
-@each $tag in $tags {
-    .label-#{$tag} {
-        @include label($tag);
+        @include themify($themes) {
+            color: themed('secondaryTextColor')
+        }
+    }
+
+    &-italic {
+        font-style: italic;
     }
 }

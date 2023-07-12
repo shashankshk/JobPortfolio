@@ -1,12 +1,42 @@
 $themes: (
-    light: (bodyBackgroundColor: #eaeaea,
-        headerFooterBackground: #f1f1f1,
-        textColor: #000,
+    light: (bodyBackgroundColor: #FAFAFA,
+        headerFooterBackground: #FAFAFA,
+        textColor: #202020,
+        secondaryTextColor: #555555,
         toggleBackground: #dfe4ea,
-    ),
-    dark: (bodyBackgroundColor: #222736,
-        headerFooterBackground: #36394c,
-        textColor: #eff2f7,
+        buttonBackground: #1A237E,
+        buttonText: #FFFFFF,
+        accent: #1A237E,
+        secondaryButtonBackground: #DDDDDD,
+        secondaryButtonText: #202020,
+
+        // section 2
+        section2BackgroundColor: #F5F5F5,
+        //section 3
+        section3BackgroundColor: #EEEEEE,
+        //section 4
+        section4BackgroundColor: #E0E0E0,
+        // card such as project card
+        cardBackground: #f3f3f3),
+
+    dark: (bodyBackgroundColor: #202020,
+        headerFooterBackground: #202020,
+        textColor: #FAFAFA,
+        secondaryTextColor: #AAAAAA,
         toggleBackground: #606071,
+        buttonBackground: #8C9EFF,
+        buttonText: #FAFAFA,
+        accent: #8C9EFF,
+        secondaryButtonBackground: #4D4D4D,
+        secondaryButtonText: #FAFAFA,
+        // section 2
+        section2BackgroundColor: #282828,
+        //section 3
+        section3BackgroundColor: #333333,
+        //section 4
+        section4BackgroundColor: #3D3D3D, // card such as project card
+        cardBackground: #323232,
     ),
+
+
 );

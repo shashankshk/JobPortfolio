@@ -1,0 +1,17 @@
+.blogs-page {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10%;
+
+    @include themify($themes) {
+        background: themed('bodyBackgroundColor');
+    }
+
+    @include for-desktop-up {
+        padding: 30px 15%;
+    }
+
+    .blogs-list {
+        margin: auto;
+    }
+}
