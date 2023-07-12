@@ -13,7 +13,7 @@ const Home = () => {
     <div className='home-container'>
       <Intro />
       <ProjectsOverview projects={projects} />
-      {!loading && <BlogsPreview blogs={data.articlesCollection.items} />}
+      {!loading && !error && <BlogsPreview blogs={data.articlesCollection.items} />}
     </div>
   );
 };
