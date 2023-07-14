@@ -1,10 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import ShadowWrapper from '../../../Components/ShadowWrapper';
-// import PropTypes from 'prop-types';
 import personal from '../../../Assets/images/Self.jpg';
-// import './Intro.scss';
-// import Image from '../../../Components/Image';
 import NormalButton from '../../../Components/Buttons/NormalButton';
 import Image from 'react-graceful-image';
 import { useNavigate } from 'react-router-dom';
@@ -36,7 +31,7 @@ const Intro = () => {
             </div>
           </div>
           {/* </Card> */}
-          <div className='intro-buttons'>
+          <div className='buttons-group'>
             <NormalButton
               value={'View Projects'}
               type={'primary'}

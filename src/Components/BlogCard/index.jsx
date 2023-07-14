@@ -9,7 +9,7 @@ const BlogCard = ({ blog, type }) => {
 
   return (
     <div className={classes}>
-      <Image src={coverImage.url} width={'100%'} height={'auto'} />
+      <Image src={coverImage.url} width={'100%'} height={'auto'} noLazyLoad />
       <Label value={title} type='primary' />
       <Label value={author} type='secondary' />
     </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-// import './HeaderMenu.scss';
 import { headerMenuItems } from '../../utils/constants';
 import MenuItem from '../../Components/MenuItem';
 

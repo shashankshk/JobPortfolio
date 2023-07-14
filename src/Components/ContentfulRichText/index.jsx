@@ -48,7 +48,6 @@ const options = {
     [INLINES.HYPERLINK]: (node, children) => {
       return <a href={node.data.uri}>{children}</a>;
     },
-    // Add more types as necessary
   },
 };
 

@@ -7,7 +7,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     @include for-desktop-up {
-        padding: 30px 15%;
+        padding: 60px 15%;
     }
 
     @include for-tablet-landscape-up {
@@ -119,6 +119,10 @@
         margin-top: -90px;
         z-index: 1;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .buttons-group {
+        padding: 0;
     }
 
 }

@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-// const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 module.exports = (env) => {
   const isProduction = env === 'production';
   return {
@@ -54,6 +53,7 @@ module.exports = (env) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './public/index.html',
+        favicon: './src/Assets/images/NewLogoSmall.jpg',
       }),
       new Dotenv(),
     ],

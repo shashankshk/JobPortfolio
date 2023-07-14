@@ -10,9 +10,17 @@ export const client = new ApolloClient({
   },
 });
 
-export const get = (query, variables) => {
-  client.query({
-    query: query,
-    variables: variables,
-  });
+export const get = async (query, variables) => {
+  try {
+    const result = await client.query({
+      query: query,
+      variables: variables,
+    });
+    return result.data;
+  } catch (e) {
+    return {
+      error: e,
+      message: 'Could not load data',
+    };
+  }
 };

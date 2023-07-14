@@ -2,9 +2,9 @@
 
 @import "components/buttons", "components/card", "components/icons", "components/labels", "components/menuItem",
 "components/shadowWrapper", "components/themeButton", "components/headerMenu", "components/projectCard", "components/description", "components/headings",
-"components/blogCard", "components/blogItem", "components/contentfulRichText", "components/social";
+"components/blogCard", "components/blogItem", "components/contentfulRichText", "components/social", "components/pageLoader";
 
-@import "layout/blogsPreview", "layout/projectsOverview", "layout/intro", "layout/app", "layout/header", "layout/blogReader", "layout/projects";
+@import "layout/blogsPreview", "layout/projectsOverview", "layout/intro", "layout/app", "layout/header", "layout/blogReader", "layout/projects", "layout/buttons_group";
 
 @import "base/reset", "base/typography";
 
