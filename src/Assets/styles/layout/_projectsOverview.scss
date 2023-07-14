@@ -27,7 +27,7 @@
     }
 
     @include for-tablet-portrait-up {
-        // font-size: 48px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
     }
 
     .projects-showcase {

@@ -1,5 +1,7 @@
 .description {
 
+    font-size: 20px;
+
     @include themify($themes) {
         color: themed('secondaryTextColor')
     }

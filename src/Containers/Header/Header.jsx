@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import logo from '../../Assets/images/NewLogo.png';
+import logo from '../../Assets/images/Logo.png';
 import Image from '../../Components/Image';
 import HeaderMenu from './HeaderMenu';
 import { ThemeContext } from '../../contexts/theme';
@@ -12,7 +12,7 @@ const Header = () => {
   };
   return (
     <div className='header'>
-      <Image src={logo} height={48} width={48} />
+      <Image src={logo} height={56} width={56} />
       <HeaderMenu />
       <ThemeButton onClick={handleThemeChange} theme={theme} />
     </div>

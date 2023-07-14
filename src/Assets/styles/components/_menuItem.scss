@@ -31,8 +31,7 @@
         transform: translateX(-50%);
     }
 
-    .nav-link:hover::before,
-    .nav-link.menu-active::before {
+    .nav-link:hover::before {
         width: 100%;
     }
 }
