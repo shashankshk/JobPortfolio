@@ -107,3 +107,11 @@ export const GET_PROJECT = gql`
     }
   }
 `;
+
+export const GET_RESUME = gql`
+  query GetResume($id: String!) {
+    asset(id: $id) {
+      url
+    }
+  }
+`;

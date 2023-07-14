@@ -58,6 +58,7 @@ module.exports = (env) => {
       new webpack.DefinePlugin({
         'process.env.SPACE_ID': JSON.stringify(process.env.SPACE_ID),
         'process.env.CONTENT_DELIVERY_API': JSON.stringify(process.env.CONTENT_DELIVERY_API),
+        'process.env.RESUME_ID': JSON.stringify(process.env.RESUME_ID),
       }),
     ],
     devtool: isProduction ? 'source-map' : 'cheap-module-source-map',

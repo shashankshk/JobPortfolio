@@ -7,7 +7,6 @@ import BlogsPreview from './BlogsPreview';
 
 const Home = () => {
   const { loading, error, data } = useQuery(GET_ARTICLES_INTRO);
-  console.log(loading, error, data);
   return (
     <div className='home-container'>
       <Intro />
@@ -16,7 +15,5 @@ const Home = () => {
     </div>
   );
 };
-
-// Home.propTypes = {};
 
 export default Home;
