@@ -100,6 +100,16 @@ export const GET_PROJECT = gql`
       title
       description {
         json
+        links {
+          assets {
+            block {
+              sys {
+                id
+              }
+              url
+            }
+          }
+        }
       }
       projectImage {
         url

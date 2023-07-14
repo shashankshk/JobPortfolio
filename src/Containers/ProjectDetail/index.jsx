@@ -14,7 +14,10 @@ const ProjectDetail = () => {
         <>
           <h1 className='heading-1 heading-1-title'>{data.projects.title}</h1>
           <Image src={data.projects.projectImage.url} width={'100%'} />
-          <ContentfulRichText document={data.projects.description.json} />
+          <ContentfulRichText
+            document={data.projects.description.json}
+            links={data.projects.description.links}
+          />
         </>
       )}
     </div>
