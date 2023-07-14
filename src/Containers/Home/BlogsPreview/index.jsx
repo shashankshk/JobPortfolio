@@ -4,7 +4,7 @@ import BlogCard from '../../../Components/BlogCard';
 
 const BlogsPreview = ({ blogs }) => {
   const firstOrderBlog = blogs.find((item) => item.order == 1);
-  return (
+  return blogs.length ? (
     <div className='home-blogs-section'>
       <h2 className='heading-2'>Blogs</h2>
       <div className='blogs-overview'>
@@ -19,6 +19,8 @@ const BlogsPreview = ({ blogs }) => {
         </div>
       </div>
     </div>
+  ) : (
+    ''
   );
 };
 
