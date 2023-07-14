@@ -53,6 +53,7 @@ module.exports = (env) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './public/index.html',
+        favicon: './public/favicon.ico',
       }),
       new webpack.DefinePlugin({
         'process.env.SPACE_ID': JSON.stringify(process.env.SPACE_ID),
