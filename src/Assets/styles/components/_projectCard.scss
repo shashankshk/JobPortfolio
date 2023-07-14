@@ -16,6 +16,20 @@
     padding: 20px;
     text-align: center;
 
+    @include for-phone-only {
+        min-width: 300px;
+        justify-content: center;
+    }
+
+    @include for-tablet-portrait-up {
+        min-width: 360px;
+    }
+
+    @include for-mid-desktop-up {
+        min-width: 280px;
+    }
+
+
     .project-overview-description {
         margin-top: 16px;
 

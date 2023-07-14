@@ -44,6 +44,18 @@
     }
 }
 
+@mixin for-mid-desktop-up {
+    @media (min-width: 1400px) and (max-width: 1800px) {
+        @content;
+    }
+}
+
+@mixin for-mid-desktop-exception-up {
+    @media (min-width: 900px) and (max-width: 1000px) {
+        @content;
+    }
+}
+
 @mixin for-big-desktop-up {
     @media (min-width: 1800px) {
         @content;

@@ -30,6 +30,14 @@
         clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
     }
 
+    @include for-tablet-landscape-up {
+        clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    @include for-desktop-up {
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    }
+
     .projects-showcase {
         display: flex;
         flex-wrap: wrap;
@@ -37,6 +45,15 @@
 
         @include for-phone-only {
             flex-direction: column;
+            justify-content: center;
+        }
+
+        @include for-tablet-portrait-up {
+            justify-content: center;
+        }
+
+        @include for-mid-desktop-exception-up {
+            justify-content: center;
         }
 
         .more-projects {
