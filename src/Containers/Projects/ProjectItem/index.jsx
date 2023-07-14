@@ -13,31 +13,69 @@ const ProjectItem = ({ project, index }) => {
   const handleNavigation = () => {
     navigate(`/projects/${sys.id}`);
   };
+
+  const getPresentation = (order) => {
+    if (order % 2 !== 0) {
+      return (
+        <>
+          <div className='project-detail-section'>
+            <h2 className='heading-2'>{title}</h2>
+            <p className='description'>{summary}</p>
+            <div className='buttons-group'>
+              <NormalButton
+                value={'View Detail'}
+                onClick={handleNavigation}
+                type={'primary'}
+                className={'primary'}
+              />
+              <NormalButton
+                value={'Link'}
+                type={'secondary'}
+                className={'secondary'}
+                onClick={() => window.open(projectLink)}
+              >
+                <Icon type={faArrowUpRightFromSquare} />
+              </NormalButton>
+            </div>
+          </div>
+          <div className='project-image-section'>
+            <Image src={projectImage?.url} className='project-image' />
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <div className='project-image-section'>
+            <Image src={projectImage?.url} className='project-image' />
+          </div>
+          <div className='project-detail-section'>
+            <h2 className='heading-2'>{title}</h2>
+            <p className='description'>{summary}</p>
+            <div className='buttons-group'>
+              <NormalButton
+                value={'View Detail'}
+                onClick={handleNavigation}
+                type={'primary'}
+                className={'primary'}
+              />
+              <NormalButton
+                value={'Link'}
+                type={'secondary'}
+                className={'secondary'}
+                onClick={() => window.open(projectLink)}
+              >
+                <Icon type={faArrowUpRightFromSquare} />
+              </NormalButton>
+            </div>
+          </div>
+        </>
+      );
+    }
+  };
   return (
     <div className={`project-section project-section-s${index + 1}`}>
-      <div className='project-detail-section'>
-        <h2 className='heading-2'>{title}</h2>
-        <p className='description'>{summary}</p>
-        <div className='buttons-group'>
-          <NormalButton
-            value={'View Detail'}
-            onClick={handleNavigation}
-            type={'primary'}
-            className={'primary'}
-          />
-          <NormalButton
-            value={'Link'}
-            type={'secondary'}
-            className={'secondary'}
-            onClick={() => window.open(projectLink)}
-          >
-            <Icon type={faArrowUpRightFromSquare} />
-          </NormalButton>
-        </div>
-      </div>
-      <div className='project-image-section'>
-        <Image src={projectImage?.url} className='project-image' />
-      </div>
+      {getPresentation(index + 1)}
     </div>
   );
 };
