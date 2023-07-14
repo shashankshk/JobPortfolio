@@ -1,3 +1,14 @@
+$font-stack: 'Roboto', sans-serif;
+$font-size: 16px;
+$line-height: 1.5;
+$paragraph-margin: 1em 0;
+
+body {
+    font-family: $font-stack;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
 * {
     font-family: Roboto, sans-serif;
 }

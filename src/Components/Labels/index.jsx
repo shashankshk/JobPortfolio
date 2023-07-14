@@ -17,7 +17,7 @@ Label.propTypes = {
   type: PropTypes.oneOf(['primary', 'secondary']),
   value: PropTypes.string,
   className: PropTypes.string,
-  italic: PropTypes.Boolean,
+  italic: PropTypes.bool,
 };
 
 export default Label;

@@ -1,25 +1,28 @@
-import React, { useState } from 'react';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-
-// import your icons
-// import {  } from '@fortawesome/free-solid-svg-icons';
-// import { faSun } from '@fortawesome/free-regular-svg-icons';
+import React, { useEffect, useState } from 'react';
 import './Assets/styles/main.scss';
 import Header from './Containers/Header/Header';
 import { ThemeContext } from './contexts/theme';
 import './utils/icons';
-// import Home from './Containers/Home';
-import { Outlet } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { Outlet, useLocation } from 'react-router-dom';
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <ThemeContext.Provider value={{ theme, setTheme }}>
         <div className={`theme-${theme}`}>
           <div className='app-container'>
             <Header />
-            <Outlet />
+            <TransitionGroup component={null}>
+              <CSSTransition key={location.key} classNames='fade' timeout={500}>
+                <Outlet />
+              </CSSTransition>
+            </TransitionGroup>
           </div>
         </div>
       </ThemeContext.Provider>

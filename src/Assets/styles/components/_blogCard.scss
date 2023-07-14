@@ -3,7 +3,7 @@
     flex-direction: column;
 
     @include themify($themes) {
-        background-color: themed('cardBackground');
+        background: themed('section2BackgroundColor');
     }
 
     &-pinned {

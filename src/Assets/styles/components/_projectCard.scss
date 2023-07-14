@@ -15,6 +15,10 @@
     padding: 20px;
     text-align: center;
 
+    .project-overview-description {
+        margin-top: 16px;
+    }
+
     .project-image {
         width: 100%;
         height: auto;
@@ -22,15 +26,26 @@
 
     .project-title {
         font-size: 1.5em;
-        margin-top: 15px;
+        margin: auto;
+        padding: 5px;
     }
 
     .project-description {
         font-size: 1em;
-        margin-top: 10px;
+        margin-top: auto;
     }
 
     .project-link {
         margin: auto;
     }
+
+    .normal-button-primary {
+        margin: 0 auto;
+    }
+}
+
+.project-card-image-placeholder {
+    height: 220px;
+    width: 380px;
+    background-color: #c5c5c5;
 }

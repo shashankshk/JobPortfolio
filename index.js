@@ -9,6 +9,7 @@ import { client } from './src/API/api';
 import Resume from './src/Containers/Resume';
 import BlogReader from './src/Containers/BlogReader';
 import Projects from './src/Containers/Projects';
+import ProjectDetail from './src/Containers/ProjectDetail';
 
 client;
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: 'projects',
         element: <Projects />,
+      },
+      {
+        path: 'projects/:projectId',
+        element: <ProjectDetail />,
       },
     ],
   },

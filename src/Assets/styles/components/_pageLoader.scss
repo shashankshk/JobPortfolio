@@ -1,0 +1,8 @@
+.page-loader {
+    height: 100vh;
+    text-align: center;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColor');
+    }
+}
