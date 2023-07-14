@@ -29,7 +29,7 @@ const ProjectCard = ({ project, index, onClick }) => {
 };
 
 ProjectCard.propTypes = {
-  project: { name: PropTypes.string, image: PropTypes.string, description: PropTypes.string },
+  project: PropTypes.object,
   index: PropTypes.number,
   onClick: PropTypes.func,
 };

@@ -17,14 +17,7 @@ const BlogCard = ({ blog, type }) => {
 };
 
 BlogCard.propTypes = {
-  blog: {
-    coverImage: {
-      url: PropTypes.string,
-    },
-    title: PropTypes.string,
-    author: PropTypes.string,
-    tags: PropTypes.array,
-  },
+  blog: PropTypes.object,
   type: PropTypes.string,
 };
 
