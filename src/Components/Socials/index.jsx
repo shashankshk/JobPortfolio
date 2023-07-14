@@ -17,7 +17,7 @@ const Socials = () => {
         onClick={() => window.open('https://www.linkedin.com/in/shashank--shekhar/')}
         className='social-icon'
       >
-        <Icon type={faLinkedin} style={{ color: '#0A66C2', margin: 'auto 0 auto 0' }} size='xl' />
+        <Icon type={faLinkedin} style={{ color: 'white', margin: 'auto 0 auto 0' }} size='xl' />
       </div>
     </>
   ) : (
@@ -33,7 +33,7 @@ const Socials = () => {
         onClick={() => window.open('https://www.linkedin.com/in/shashank--shekhar/')}
         className='social-icon'
       >
-        <Icon type={faLinkedin} style={{ color: '#0A66C2', margin: 'auto 0 auto 0' }} size='xl' />
+        <Icon type={faLinkedin} style={{ color: 'black', margin: 'auto 0 auto 0' }} size='xl' />
       </div>
     </>
   );

@@ -31,6 +31,9 @@ const Intro = () => {
             </div>
           </div>
           {/* </Card> */}
+          <div>
+            <Socials />
+          </div>
           <div className='buttons-group'>
             <NormalButton
               value={'View Projects'}
@@ -44,7 +47,6 @@ const Intro = () => {
               className={'secondary'}
               onClick={() => navigate('/resume')}
             />
-            <Socials />
           </div>
         </div>
       </div>

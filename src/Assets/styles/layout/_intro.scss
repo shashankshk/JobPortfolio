@@ -3,7 +3,7 @@
     padding-bottom: 15%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     max-width: 100%;
     justify-content: space-between;
 
@@ -29,7 +29,7 @@
 
     .left-section {
         display: flex;
-        flex-basis: 48%;
+        // flex-basis: 48%;
         align-items: center;
 
         @include for-tablet-portrait-up {
@@ -41,17 +41,27 @@
         }
 
         .intro-image {
-            width: 100%;
-            height: auto;
+            border-radius: 50%;
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
 
             @include for-tablet-portrait-up {
                 width: 480px;
+                height: 480px;
                 margin: auto;
             }
 
             @include for-phone-only {
                 width: 240px;
+                height: 240px;
                 margin: auto;
+            }
+
+            @include for-tablet-landscape-up {
+                width: 380px;
+                height: 380px;
+
             }
         }
     }
@@ -59,14 +69,17 @@
     .right-section {
         display: flex;
         align-items: center;
-        flex-basis: 48%;
+        // flex-basis: 48%;
+        margin-left: 60px;
 
         @include for-tablet-portrait-up {
             flex-basis: auto;
+            margin: auto;
         }
 
         @include for-phone-only {
             flex-basis: auto;
+            margin: auto;
         }
 
         .intro-description {
