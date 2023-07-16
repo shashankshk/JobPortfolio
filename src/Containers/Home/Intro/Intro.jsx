@@ -20,13 +20,19 @@ const Intro = () => {
               <h1 className='heading-1'>Hi! I am Shashank</h1>
               <p className='description'>
                 I&apos;m a software engineer with a knack for transforming tricky challenges into
-                elegant software solutions. I&apos;ve spent my career developing cool applications
+                elegant software solutions, currently pursuing a Masters in Software Engineering at
+                Carnegie Mellon University. I&apos;ve spent my career developing cool applications
                 with some of the biggest names in the biz, using a whole alphabet soup of
-                technologies like JavaScript, TypeScript, React, and more. I got my Master&apos;s
-                from Carnegie Mellon, but I&apos;m always learning, always growing. This website is
-                a showcase of my journey so far: the projects I&apos;ve loved, the teams I&apos;ve
+                technologies like JavaScript, TypeScript, React, and more. This website is a
+                showcase of my journey so far: the projects I&apos;ve loved, the teams I&apos;ve
                 collaborated with, and the impact I&apos;ve made along the way. Dive in and see what
                 I&apos;ve been up to!
+              </p>
+              <p className='description'>
+                <b>Mobile:</b> +1 (412)-277-9980
+              </p>
+              <p className='description'>
+                <b>Email:</b> shk11sharma@gmail.com
               </p>
             </div>
           </div>
