@@ -18,11 +18,11 @@ const App = () => {
         <div className={`theme-${theme}`}>
           <div className='app-container'>
             <Header />
-            <TransitionGroup component={null}>
-              <CSSTransition key={location.key} classNames='fade' timeout={500}>
-                <Outlet />
-              </CSSTransition>
-            </TransitionGroup>
+            {/* <TransitionGroup component={null}> */}
+            {/* <CSSTransition key={location.key} classNames='fade' timeout={500}> */}
+            <Outlet />
+            {/* </CSSTransition> */}
+            {/* </TransitionGroup> */}
           </div>
         </div>
       </ThemeContext.Provider>
