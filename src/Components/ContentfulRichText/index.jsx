@@ -5,12 +5,15 @@ import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { obsidian } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import Image from 'react-graceful-image';
+// import Image from 'react-graceful-image';
 const renderOptions = (links) => {
   const assets = new Map();
-  for (const asset of links.assets.block) {
-    assets.set(asset.sys.id, asset);
+  if (links) {
+    for (const asset of links.assets.block) {
+      assets.set(asset.sys.id, asset);
+    }
   }
+
   return {
     renderMark: {
       [MARKS.BOLD]: (text) => <strong>{text}</strong>,
@@ -45,8 +48,8 @@ const renderOptions = (links) => {
       [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
       [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
       [BLOCKS.QUOTE]: (node, children) => <blockquote>{children}</blockquote>,
-      [BLOCKS.EMBEDDED_ASSET]: (node) => {
-        const asset = assets.get(node.data.target.sys.id);
+      [BLOCKS.EMBEDDED_ASSET]: () => {
+        // const asset = assets.get(node.data.target.sys.id);
         // const { title, file } = node.data.target.fields;
         // const imageUrl = file['en-US'].url;
         // const alt = title['en-US'];
