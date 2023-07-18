@@ -5,6 +5,7 @@ import NormalButton from '../../Components/Buttons/NormalButton';
 import PageLoader from '../../Components/PageLoader';
 import { useQuery } from '@apollo/client';
 import { GET_RESUME } from '../../API/query';
+import AnimationProvider from '../../Components/AnimatedComponent';
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.js',
   import.meta.url,
@@ -31,23 +32,25 @@ const Resume = () => {
   return (
     <>
       {!loading && !error ? (
-        <div className={'resume-page'} style={!loaded ? { display: 'none' } : {}}>
-          {!loaded && <PageLoader />}
-          <Document
-            file={data.asset.url}
-            renderMode='canvas'
-            className='resume-preview'
-            onLoadSuccess={() => setLoaded(true)}
-          >
-            <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
-          </Document>
-          <NormalButton
-            value={'Download Resume'}
-            type={'primary'}
-            className={'resume-botton'}
-            onClick={downloadPdf}
-          />
-        </div>
+        <AnimationProvider>
+          <div className={'resume-page'} style={!loaded ? { display: 'none' } : {}}>
+            {!loaded && <PageLoader />}
+            <Document
+              file={data.asset.url}
+              renderMode='canvas'
+              className='resume-preview'
+              onLoadSuccess={() => setLoaded(true)}
+            >
+              <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
+            </Document>
+            <NormalButton
+              value={'Download Resume'}
+              type={'primary'}
+              className={'resume-botton'}
+              onClick={downloadPdf}
+            />
+          </div>
+        </AnimationProvider>
       ) : (
         <PageLoader />
       )}

@@ -3,8 +3,8 @@ import './Assets/styles/main.scss';
 import Header from './Containers/Header/Header';
 import { ThemeContext } from './contexts/theme';
 import './utils/icons';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Outlet, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
   const [theme, setTheme] = useState('dark');
@@ -18,11 +18,9 @@ const App = () => {
         <div className={`theme-${theme}`}>
           <div className='app-container'>
             <Header />
-            {/* <TransitionGroup component={null}> */}
-            {/* <CSSTransition key={location.key} classNames='fade' timeout={500}> */}
-            <Outlet />
-            {/* </CSSTransition> */}
-            {/* </TransitionGroup> */}
+            <AnimatePresence>
+              <Outlet />
+            </AnimatePresence>
           </div>
         </div>
       </ThemeContext.Provider>

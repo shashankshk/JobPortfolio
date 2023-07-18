@@ -3,6 +3,7 @@ import ProjectItem from './ProjectItem';
 import { GET_PROJECTS } from '../../API/query';
 import { get } from '../../API/api';
 import PageLoader from '../../Components/PageLoader';
+import AnimationProvider from '../../Components/AnimatedComponent';
 
 const Projects = () => {
   const [projectsData, setProjectsData] = useState([]);
@@ -15,11 +16,13 @@ const Projects = () => {
   }, []);
 
   return projectsData.length ? (
-    <div className='projects-page'>
-      {projectsData.map((project, index) => (
-        <ProjectItem project={project} key={index} index={index} />
-      ))}
-    </div>
+    <AnimationProvider>
+      <div className='projects-page'>
+        {projectsData.map((project, index) => (
+          <ProjectItem project={project} key={index} index={index} />
+        ))}
+      </div>
+    </AnimationProvider>
   ) : (
     <PageLoader />
   );
